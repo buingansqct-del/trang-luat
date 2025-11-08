@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kho Luật - Toàn văn: Nghĩa vụ Quân sự | An ninh mạng | Bộ luật Hình sự</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f7fb;color:#111}
+    header{background:#0b63d6;color:#fff;padding:16px}
+    .container{max-width:1100px;margin:18px auto;padding:12px}
+    nav{display:flex;gap:8px;flex-wrap:wrap}
+    .tab{padding:10px 14px;background:#fff;border-radius:8px;border:1px solid #d9e7ff;cursor:pointer}
+    .tab.active{background:#0b63d6;color:#fff}
+    .content{margin-top:12px;background:#fff;border-radius:10px;padding:12px;min-height:640px;box-shadow:0 8px 22px rgba(10,20,60,0.06)}
+    iframe{width:100%;height:820px;border:none}
+    .note{font-size:13px;color:#555;margin-top:8px}
+    footer{text-align:center;margin:16px;color:#666;font-size:13px}
+    @media(max-width:900px){iframe{height:600px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 style="margin:0;font-size:20px">Kho Luật — Toàn văn chính thức</h1>
+      <div style="margin-top:6px">Nguồn chính thức: Cổng Thông tin điện tử Chính phủ, Cổng Thông tin điện tử VBPL.</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav id="tabs">
+      <div class="tab active" data-target="nvqs">Luật Nghĩa vụ Quân sự (78/2015/QH13)</div>
+      <div class="tab" data-target="anm">Luật An ninh mạng (24/2018/QH14)</div>
+      <div class="tab" data-target="hs">Bộ luật Hình sự (100/2015/QH13)</div>
+    </nav>
+
+    <div class="content" id="nvqs-panel">
+      <h2>Luật Nghĩa vụ Quân sự — Toàn văn (tài liệu chính thức)</h2>
+      <div class="note">Tệp gốc: Cổng Thông tin điện tử Chính phủ / VBPL.</div>
+      <iframe src="https://datafiles.chinhphu.vn/cpp/files/vbpq/2015/07/78.signed.pdf"></iframe>
+      <p class="note">Nếu iframe không hiển thị, bấm vào link này để mở file PDF trực tiếp: <a href="https://datafiles.chinhphu.vn/cpp/files/vbpq/2015/07/78.signed.pdf" target="_blank">78.signed.pdf (Luật Nghĩa vụ Quân sự)</a>.</p>
+    </div>
+
+    <div class="content" id="anm-panel" style="display:none">
+      <h2>Luật An ninh mạng — Toàn văn (tài liệu chính thức)</h2>
+      <div class="note">Tệp gốc: Cổng Thông tin điện tử Chính phủ.</div>
+      <iframe src="https://datafiles.chinhphu.vn/cpp/files/vbpq/2022/07/24-2018-qh14..pdf"></iframe>
+      <p class="note">Link trực tiếp: <a href="https://datafiles.chinhphu.vn/cpp/files/vbpq/2022/07/24-2018-qh14..pdf" target="_blank">24-2018-qh14..pdf (Luật An ninh mạng)</a>.</p>
+    </div>
+
+    <div class="content" id="hs-panel" style="display:none">
+      <h2>Bộ luật Hình sự — Toàn văn (tài liệu chính thức)</h2>
+      <div class="note">Tệp gốc: Cổng Thông tin điện tử Chính phủ (bản ký).</div>
+      <iframe src="https://datafiles.chinhphu.vn/cpp/files/vbpq/2016/01/100.signed_01.pdf"></iframe>
+      <p class="note">Link trực tiếp: <a href="https://datafiles.chinhphu.vn/cpp/files/vbpq/2016/01/100.signed_01.pdf" target="_blank">100.signed_01.pdf (Bộ luật Hình sự)</a>.</p>
+    </div>
+
+    <script>
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(t=>t.addEventListener('click', ()=>{
+        tabs.forEach(x=>x.classList.remove('active'));
+        t.classList.add('active');
+        document.getElementById('nvqs-panel').style.display = t.dataset.target==='nvqs' ? 'block' : 'none';
+        document.getElementById('anm-panel').style.display = t.dataset.target==='anm' ? 'block' : 'none';
+        document.getElementById('hs-panel').style.display = t.dataset.target==='hs' ? 'block' : 'none';
+        window.scrollTo({top:0,behavior:'smooth'});
+      }));
+    </script>
+  </div>
+
+  <footer>Trang thử nghiệm — Tài liệu lấy từ nguồn chính thức (Cổng TTĐT Chính phủ / VBPL).</footer>
+</body>
+</html>
